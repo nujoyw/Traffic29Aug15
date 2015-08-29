@@ -20,10 +20,15 @@ public class MainActivity extends AppCompatActivity {
         //Bind Widget
         bindWidget();
 
-
+        //Button Controller
+        buttonController();
 
 
     }//Main Method เป็น Method แรกที่เริ่มต้นทำงาน
+
+    private void buttonController() {
+        
+    }//buttonController
 
     private void bindWidget() {
 
