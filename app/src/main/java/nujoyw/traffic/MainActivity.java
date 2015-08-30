@@ -63,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
         strTitle[18] = "จำกัดความกว้าง 2.5 เมตร";
         strTitle[19] = "จำกัดความสูง 5 เมตร";
 
+        MyAdapter objMyAdapter = new MyAdapter(MainActivity.this, intImage, strTitle);//โยนค่าไปทางท่อ context ไปที่ adapter
+        //เอา trafficlistview ไปผูกกับ adapter
+        trafficListView.setAdapter(objMyAdapter);
+
+
     }//createListView
 
 
