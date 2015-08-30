@@ -30,4 +30,13 @@
         android:layout_above="@+id/button"
         android:layout_margin="15dp"
         android:background="#4bffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignRight="@+id/listView"
+        android:layout_alignEnd="@+id/listView" />
 </RelativeLayout>

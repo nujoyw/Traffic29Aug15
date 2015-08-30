@@ -1,9 +1,13 @@
 package nujoyw.traffic;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -23,17 +27,34 @@ public class MainActivity extends AppCompatActivity {
         //Button Controller
         buttonController();
 
-
     }//Main Method เป็น Method แรกที่เริ่มต้นทำงาน
 
+
     private void buttonController() {
-        
+
+        aboutmeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //Sound Effect
+                MediaPlayer buttonPlayer = MediaPlayer.create(getBaseContext(), R.raw.effect_btn_shut);
+                buttonPlayer.start();
+
+                //Intent to web
+                Intent objIntent = new Intent(Intent.ACTION_VIEW);
+                objIntent.setData(Uri.parse("http://sites.google.com/site/comnsru")); //เปิด browser แล้วไปที่ไหน
+                startActivity(objIntent);
+
+            }//event
+        });
     }//buttonController
+
 
     private void bindWidget() {
 
         trafficListView = (ListView) findViewById(R.id.listView);
         aboutmeButton = (Button) findViewById(R.id.button);
+
     }//bindwidget
 
     @Override
